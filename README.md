@@ -10,7 +10,7 @@
 
 ### TL;DR
 
-There is a good chance that you want to build rh-che, with the dashboard but without keycloak support (because it's easier to test) and as fast as possible:
+There is a good chance that you want to build rh-che with the dashboard but without keycloak support (because it's easier to test) and as fast as possible :bowtie::
 
 ```
 git clone https://github.com/redhat-developer/rh-che
