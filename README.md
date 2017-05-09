@@ -17,6 +17,7 @@ git clone https://github.com/redhat-developer/rh-che
 cd rh-che
 mvn -DwithoutKeycloak `# disable Keycloak support` \
     -Pfast            `# skip tests and other verifications` \
+    -PmultiThread     `# enable maven multi threading` \
     clean install
 ```
 
@@ -26,6 +27,7 @@ If you have already cloned [eclipse/che](https://github.com/eclipse/che) and bui
 UPSTREAM_CHE_PATH=/path/to/upstream/che
 mvn -DwithoutKeycloak                          `# disable Keycloak support` \
     -Pfast                                     `# skip tests and other verifications` \
+    -PmultiThread                              `# enable maven multi threading` \
     -DlocalCheRepository=${UPSTREAM_CHE_PATH}  `# get already built upstream Che` \
     clean install
 ```
@@ -33,7 +35,7 @@ mvn -DwithoutKeycloak                          `# disable Keycloak support` \
 #### What is the RedHat Che distribution
 
 The RedHat distribution of Eclipse Che is a RedHat-specific packaging of Che assemblies
-that adds some RedHat specific plugins / behaviors upton the standard upstream Che
+that adds some RedHat specific plugins / behaviors up to the standard upstream Che
 distribution. It is currently based on the `openshift-connector` branch of the upstream
 Che repository. The RedHat distribution powers [openshift.io](https://openshift.io) developers workspaces.
 
